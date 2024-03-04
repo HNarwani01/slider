@@ -8,9 +8,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+/* body{
     overflow-x: hidden;
-}
+} */
 .carousel{
     width: 100vw;
     height: 100vh;
@@ -56,5 +56,87 @@ body{
     font-family: cursive;
 }
 .carousel .list .item .content .topic{
-
+    margin-bottom: 5px;
+}
+.carousel .list .item .content .des{
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.carousel .list .item .content .buttons button{
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #555;
+    border-radius: 10px;
+    color: aliceblue;
+}
+.carousel .list .item .content .buttons button:nth-child(2){
+    background-color: transparent;
+}
+.carousel .list .item:nth-child(2){
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(3){
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(4){
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(5){
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(6){
+    opacity: 0;
+    pointer-events: none;
+}
+.thumbnail{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    /* right: 0; */
+    left: 40%;
+    height: 40vh;
+    display: flex;
+    gap: 20px;
+    
+}
+.thumbnail .item{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    /* position: absolute; */
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item p{
+    position: absolute;
+    /* z-index: 100; */
+    text-transform: capitalize;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    bottom: -3%;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.thumbnail .item:hover p{
+    opacity: 1;
+    bottom: 10%;
+}
+.thumbnail .item:nth-child(1){
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
 }
